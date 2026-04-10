@@ -1,16 +1,34 @@
-# React + Vite
+# 🛒 Smart Shopping List (Full Stack Project)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi daftar belanja interaktif yang dibangun dengan arsitektur **Full Stack**. Proyek ini menghubungkan antarmuka modern (React) dengan server backend (PHP) dan penyimpanan data permanen (MySQL).
 
-Currently, two official plugins are available:
+## 🚀 Fitur Utama
+* **Real-time Synchronization**: Data di layar selalu sinkron dengan database MySQL tanpa perlu refresh manual.
+* **Persistent Storage**: Menggunakan database untuk menyimpan data secara permanen.
+* **Instant Search**: Fitur pencarian barang secara langsung (filter).
+* **Responsive Design**: Tampilan bersih dan nyaman digunakan di berbagai perangkat.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Teknologi yang Digunakan
 
-## React Compiler
+### Frontend
+* **React.js (Vite)**: Library utama untuk membangun antarmuka.
+* **Hooks (`useState`, `useEffect`)**: Untuk manajemen state dan siklus hidup komponen.
+* **Fetch API**: Digunakan untuk komunikasi data dengan server backend.
+* **CSS Modules**: Untuk styling yang rapi dan terisolasi.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend & Database
+* **PHP**: Sebagai REST API Gateway untuk memproses permintaan dari React.
+* **MySQL**: Sebagai sistem manajemen database relasional.
+* **XAMPP**: Sebagai lingkungan server lokal (Apache & MySQL).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Struktur Proyek
+```text
+/src
+  ├── /components
+  │     ├── FormTambah.jsx    # Komponen input barang
+  │     └── ItemBarang.jsx    # Komponen baris item
+  ├── App.jsx                 # Logika utama (Sinkronisasi API)
+  └── App.css                 # Styling aplikasi
+/api (XAMPP htdocs)
+  ├── ambil_barang.php        # Endpoint GET data dari MySQL
+  └── tambah_barang.php       # Endpoint POST data ke MySQL
