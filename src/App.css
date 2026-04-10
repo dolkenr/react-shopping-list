@@ -1,59 +1,135 @@
+/* Container Utama */
 .container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  h1 { text-align: center; color: #333; margin-bottom: 30px; }
-  
-  .form-tambah { display: flex; gap: 10px; margin-bottom: 25px; }
-  
-  input {
-    flex: 1;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: border 0.3s;
-  }
-  
-  input:focus { border-color: #4CAF50; }
-  
-  .btn-tambah {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .search-bar { width: 100%; margin-bottom: 20px; border-color: #2196F3; }
-  
-  .item-list { list-style: none; padding: 0; }
-  
-  .item-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #f0f0f0;
-    transition: background 0.2s;
-  }
-  
-  .item-row:hover { background: #f9f9f9; }
-  
-  .btn-hapus {
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 5px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px;
-  }
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.4s ease; /* Transisi halus untuk semua perubahan */
+  position: relative;
+}
+
+/* Tombol Ganti Tema */
+.btn-theme {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+/* Judul */
+h1 { text-align: center; color: #333; margin-bottom: 30px; transition: color 0.4s; }
+
+/* Form & Input */
+.form-tambah { display: flex; gap: 10px; margin-bottom: 25px; }
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+input:focus { border-color: #4CAF50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.2); }
+.search-bar { width: 100%; margin-bottom: 20px; border-color: #2196F3; }
+
+/* Tombol */
+.btn-tambah {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.btn-tambah:hover { filter: brightness(1.1); }
+
+/* List Item */
+.item-list { list-style: none; padding: 0; }
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.btn-hapus {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* SECTION: TOTAL HARGA */
+.total-box {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f1f8e9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid #4CAF50;
+}
+
+.total-box span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* ===========================================
+   DARK THEME OVERRIDE
+   =========================================== */
+
+.dark-theme {
+  background-color: #1a1a1a !important; /* Force background change */
+  color: #ffffff !important;
+}
+
+.dark-theme h1 { color: #ffffff; }
+
+.dark-theme .item-row {
+  background-color: #262626;
+  border-bottom: 1px solid #333;
+}
+
+.dark-theme .item-row:hover { background-color: #333; }
+
+.dark-theme input {
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark-theme .total-box {
+  background: #2e3d23;
+  border-left-color: #81c784;
+}
+
+.dark-theme .total-box span {
+  color: #81c784;
+}
+
+.dark-theme .btn-theme {
+  border-color: #555;
+  color: white;
+}
